@@ -1,0 +1,37 @@
+{
+  "name": "bf16-ai",
+  "displayName": "bf16.ai — 1M Uncensored LLM Catalog & Agent Setup",
+  "description": "Live bf16.ai gateway status bar monitor, 1M-context uncensored model pricing inspector, and one-click Claude Code / OpenCode / Roo Code / Cline setup.",
+  "version": "0.1.0",
+  "publisher": "bf16-ai",
+  "license": "MIT",
+  "icon": "icon.png",
+  "homepage": "https://bf16.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BF16-AI/bf16-vscode"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["AI", "Other", "Programming Languages"],
+  "keywords": ["bf16", "llm", "uncensored", "claude-code", "cline", "roo-code", "opencode", "deepseek"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      { "command": "bf16.listModels", "title": "bf16.ai: List Live 1M Models & Pricing" },
+      { "command": "bf16.copyConfig", "title": "bf16.ai: Copy Agent Base URL & Setup CLI" },
+      { "command": "bf16.openTools", "title": "bf16.ai: Open Cost & Context Calculators" }
+    ]
+  },
+  "scripts": {
+    "build": "tsc -p ./",
+    "package": "npx --yes @vscode/vsce package --no-git-tag-version"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.6.0"
+  }
+}
